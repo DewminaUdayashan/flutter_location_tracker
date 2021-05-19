@@ -1,0 +1,36 @@
+group 'com.location.flutter_location_tracker'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+}
+
+dependencies {
+    implementation ('com.google.android.gms:play-services-location:18.0.0') { transitive = true }
+    implementation ('androidx.appcompat:appcompat:1.2.0') { transitive = true }
+
+}
